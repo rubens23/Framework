@@ -9,17 +9,17 @@ Router.prototype.get = function(url, cb) {
   this.routes.GET[url] = cb;
 };
 
-Router.prototype.post = function() {
+Router.prototype.post = function(url, cb) {
   if (!this.routes.POST) this.routes.POST = {};
   this.routes.POST[url] = cb;
 };
 
-Router.prototype.put = function() {
+Router.prototype.put = function(url, cb) {
   if (!this.routes.PUT) this.routes.PUT = {};
   this.routes.PUT[url] = cb;
 };
 
-Router.prototype.delete = function() {
+Router.prototype.delete = function(url, cb) {
   if (!this.routes.DELETE) this.routes.DELETE = {};
   this.routes.DELETE[url] = cb;
 };
